@@ -33,7 +33,10 @@
 		this.disY = 0;
 	}
 	
-	
+	Drag.prototype.fnUp = function(move1,up1){
+		document.removeEventListener('mousemove',move1);
+		document.removeEventListener('mouseup',up1);
+	}
 	
 	
 </script>
