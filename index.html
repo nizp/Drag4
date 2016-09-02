@@ -36,12 +36,15 @@
 		this.disX = ev.pageX - this.box.offsetLeft;
 		this.disY = ev.pageY - this.box.offsetTop;
 	}
-	
-	
+
 	
 	Drag.prototype.fnMove = function(ev){
 		this.box.style.left = ev.pageX - this.disX + 'px';
 		this.box.style.top = ev.pageY - this.disY + 'px';
+
+	Drag.prototype.fnUp = function(move1,up1){
+		document.removeEventListener('mousemove',move1);
+		document.removeEventListener('mouseup',up1);
 	}
 	
 	
