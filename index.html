@@ -33,6 +33,10 @@
 		this.disY = 0;
 	}
 	
+	Drag.prototype.down = function(ev){
+		this.disX = ev.pageX - this.box.offsetLeft;
+		this.disY = ev.pageY - this.box.offsetTop;
+	}
 	
 	
 	
